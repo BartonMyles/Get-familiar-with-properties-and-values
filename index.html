@@ -2,164 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>8-Star Registration Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Properties and Positioning Demo</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-    }
-
     body {
-      background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #fafafa;
     }
 
-    .form-container {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(12px);
-      width: 100%;
-      max-width: 400px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: 0.3s ease;
-    }
-
-    .form-container:hover {
-      transform: scale(1.02);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    }
-
-    .form-container h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 28px;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 1px;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
+    #container {
       position: relative;
+      width: 400px;
+      height: 300px;
+      border: 2px solid #333;
+      background-color: #e0e0e0;
+      overflow: hidden;
+      margin-bottom: 20px;
     }
 
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .form-group input {
-      width: 100%;
-      padding: 12px 15px 12px 45px;
-      border: none;
-      border-radius: 10px;
-      background-color: rgba(255, 255, 255, 0.08);
-      color: #fff;
-      font-size: 16px;
-      transition: 0.3s ease;
-    }
-
-    .form-group input:focus {
-      outline: none;
-      background-color: rgba(255, 255, 255, 0.12);
-      box-shadow: 0 0 0 2px #ff4b2b50;
-    }
-
-    .form-group .icon {
+    #box {
       position: absolute;
-      top: 38px;
-      left: 15px;
-      font-size: 16px;
-      color: #aaa;
-    }
-
-    .submit-btn {
-      width: 100%;
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
-      color: #fff;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-
-    .submit-btn:hover {
-      background: linear-gradient(to right, #ff4b2b, #ff416c);
-    }
-
-    .form-group input:focus + .tooltip {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .tooltip {
-      position: absolute;
-      bottom: -35px;
+      width: 50px;
+      height: 50px;
+      background-color: #007bff;
+      top: 0;
       left: 0;
-      background-color: rgba(255, 255, 255, 0.2);
-      color: #fff;
-      padding: 5px 10px;
-      font-size: 12px;
-      border-radius: 5px;
-      opacity: 0;
-      transition: 0.3s ease;
-      transform: translateY(20px);
+      transition: all 0.2s ease;
+      border-radius: 8px;
+    }
+
+    .button-group {
+      margin: 10px 0;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-  <div class="form-container">
-    <h2>Create Your Account</h2>
-    <form action="#" method="post">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <i class="fas fa-user icon"></i>
-        <input type="text" id="name" name="name" placeholder="John Doe" required />
-        <div class="tooltip">Enter your full name.</div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <i class="fas fa-envelope icon"></i>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required />
-        <div class="tooltip">Enter a valid email address.</div>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <i class="fas fa-lock icon"></i>
-        <input type="password" id="password" name="password" placeholder="••••••••" required />
-        <div class="tooltip">Password must be at least 8 characters.</div>
-      </div>
-      <div class="form-group">
-        <label for="confirm-password">Confirm Password</label>
-        <i class="fas fa-lock icon"></i>
-        <input type="password" id="confirm-password" name="confirm-password" placeholder="Repeat password" required />
-        <div class="tooltip">Please re-enter your password.</div>
-      </div>
-      <button type="submit" class="submit-btn">Register</button>
-    </form>
+  <h1>Properties & Positioning Interactive Demo</h1>
+  <p>This demo shows how properties and values work with positioning and styles.</p>
+
+  <div id="container">
+    <div id="box"></div>
   </div>
+
+  <div class="button-group">
+    <strong>Move Box:</strong><br />
+    <button onclick="moveBox('up')">Up</button>
+    <button onclick="moveBox('down')">Down</button>
+    <button onclick="moveBox('left')">Left</button>
+    <button onclick="moveBox('right')">Right</button>
+  </div>
+
+  <div class="button-group">
+    <strong>Change Box Style:</strong><br />
+    <button onclick="changeProperty('color')">Change Color</button>
+    <button onclick="changeProperty('size')">Resize</button>
+    <button onclick="changeProperty('round')">Toggle Corners</button>
+    <button onclick="resetBox()">Reset</button>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const box = document.getElementById('box');
+      const container = document.getElementById('container');
+
+      // Initial position
+      let topPos = 0;
+      let leftPos = 0;
+
+      // Movement step
+      const step = 20;
+
+      // Move the box with limits
+      window.moveBox = function(direction) {
+        const maxTop = container.clientHeight - box.clientHeight;
+        const maxLeft = container.clientWidth - box.clientWidth;
+
+        if (direction === 'up') {
+          topPos = Math.max(0, topPos - step);
+        } else if (direction === 'down') {
+          topPos = Math.min(maxTop, topPos + step);
+        } else if (direction === 'left') {
+          leftPos = Math.max(0, leftPos - step);
+        } else if (direction === 'right') {
+          leftPos = Math.min(maxLeft, leftPos + step);
+        }
+
+        // Set the CSS positioning properties (property: value)
+        box.style.top = topPos + 'px';
+        box.style.left = leftPos + 'px';
+      };
+
+      // Change box visual properties
+      window.changeProperty = function(type) {
+        if (type === 'color') {
+          // Toggle between blue and green
+          box.style.backgroundColor = box.style.backgroundColor === 'green' ? '#007bff' : 'green';
+        } else if (type === 'size') {
+          // Toggle between small and large
+          if (box.style.width === '100px') {
+            box.style.width = '50px';
+            box.style.height = '50px';
+          } else {
+            box.style.width = '100px';
+            box.style.height = '100px';
+          }
+        } else if (type === 'round') {
+          // Toggle corner roundness
+          box.style.borderRadius = box.style.borderRadius === '8px' ? '50%' : '8px';
+        }
+      };
+
+      // Reset everything
+      window.resetBox = function() {
+        topPos = 0;
+        leftPos = 0;
+        box.style.top = '0px';
+        box.style.left = '0px';
+        box.style.width = '50px';
+        box.style.height = '50px';
+        box.style.backgroundColor = '#007bff';
+        box.style.borderRadius = '8px';
+      };
+    });
+  </script>
 
 </body>
 </html>
